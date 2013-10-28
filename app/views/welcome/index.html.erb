@@ -1,1 +1,18 @@
 <h1><%= @survey.name %></h1>
+
+<ol>
+  <% @survey.questions.each do |question| %>
+    <li>
+      <% question.text.split("<new-paragraph>").each do |paragraph| %>
+        <%= paragraph %><br /><br />
+      <% end %>
+      <% question.options.each do |option| %>
+        <%= radio_button_tag(:score, option.weight) %>
+        <%= label_tag(:id, option.text) %> <br />
+      <% end -%>
+    </li>
+  <% end %>
+</ol>
+
+<a href="">Back</a>
+<a href="">Next</a>
