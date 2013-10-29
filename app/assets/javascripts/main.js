@@ -44,6 +44,10 @@ var survey = {
     getResults: function(score) {
         //determines results based on score and redirects to todaysapple subscription page
         console.log("Your parenting style is: " + results[String(score)]);
+        $("#progress").removeClass();
+        setTimeout(function() { survey.redirectToSubscription(); }, 5000);
+    },
+    redirectToSubscription: function() {
         window.location = "http://todaysapple.com/todays-apple-survey/?parentingstyle=" + results[String(score)];
     }
 };
