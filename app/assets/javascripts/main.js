@@ -5,6 +5,11 @@ var survey = {
         $(".question:eq("+index+")").toggleClass("visible-question");
     },
     getWeightValue: function() {
+    },
+    disableBackButton: function() {
+        // if (i === 0) {
+
+        // }
     }
 };
 
@@ -22,6 +27,14 @@ $(window).ready(function() {
         }
     });
 
+    //event listener for clicking back
+    $("#back-button").click(function() {
+        if (i > 0) {
+            survey.toggleQuestion(i);
+            i--;
+            survey.toggleQuestion(i);
+        }
+    });
 });
 
 // $("input[type=radio]:checked")
