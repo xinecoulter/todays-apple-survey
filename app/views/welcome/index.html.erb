@@ -2,7 +2,7 @@
 
 <ol>
   <% @survey.questions.each do |question| %>
-    <li>
+    <li class="question">
       <% question.text.split("<new-paragraph>").each do |paragraph| %>
         <%= paragraph %><br /><br />
       <% end %>
@@ -14,5 +14,5 @@
   <% end %>
 </ol>
 
-<a href="">Back</a>
-<a href="">Next</a>
+<button id="back-button">Back</button>
+<button id="next-button">Next</button>

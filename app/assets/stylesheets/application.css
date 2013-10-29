@@ -11,3 +11,12 @@
  *= require_self
  *= require_tree .
  */
+
+.hidden-question {
+  display: none;
+}
+
+.visible-question {
+  display: list-item;
+  list-style-type: none;
+}
