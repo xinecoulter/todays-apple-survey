@@ -42,12 +42,13 @@ var survey = {
         return score;
     },
     getResults: function(score) {
-        //determines results based on score and redirects to todaysapple subscription page
+        //determines results based on score and calls redirectToSubscription after 1.5seconds (enough time to finish progress animation)
         console.log("Your parenting style is: " + results[String(score)]);
         $("#progress").removeClass();
-        setTimeout(function() { survey.redirectToSubscription(); }, 5000);
+        setTimeout(function() { survey.redirectToSubscription(); }, 1500);
     },
     redirectToSubscription: function() {
+        //redirects to todaysapple subscription page
         window.location = "http://todaysapple.com/todays-apple-survey/?parentingstyle=" + results[String(score)];
     }
 };

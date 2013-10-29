@@ -21,6 +21,7 @@
   list-style-type: none;
 }
 
+/*for animation below this point*/
 ul#progress {
   list-style: none;
   width: 125px;
@@ -52,15 +53,15 @@ ul#progress li:first-child {
 .ball {
   /* Style your ball and set the animation */
   background-color: #2187e7;
-  background-image: -moz-linear-gradient(90deg, #2187e7 25%, #a0eaff);
-  background-image: -webkit-linear-gradient(90deg, #2187e7 25%, #a0eaff);
+  background-image: -moz-linear-gradient(90deg, #00cc00 25%, #00ff00);
+  background-image: -webkit-linear-gradient(90deg, #00cc00 25%, #00ff00);
   width: 15px;
   height: 15px;
   border-radius: 50px;
   -moz-transform: scale(0);
   -webkit-transform: scale(0);
-  -moz-animation: loading 1s linear forwards;
-  -webkit-animation: loading 1s linear forwards;
+  -moz-animation: loading 0.5s linear forwards;
+  -webkit-animation: loading 0.5s linear forwards;
 }
 
 .pulse {
@@ -68,66 +69,66 @@ ul#progress li:first-child {
   width: 15px;
   height: 15px;
   border-radius: 30px;
-  border: 1px solid #00c6ff;
-  box-shadow: 0 0 5px #00c6ff;
+  border: 1px solid #00ff3a;
+  box-shadow: 0 0 5px #00ff3a;
   position: absolute;
   top: -1px;
   left: -1px;
   -moz-transform: scale(0);
   -webkit-transform: scale(0);
-  -webkit-animation: pulse 1s ease-out;
-  -moz-animation: pulse 1s ease-out;
+  -webkit-animation: pulse 0.5s ease-out;
+  -moz-animation: pulse 0.5s ease-out;
 }
 
 /* Control Layers */
 #layer1 {
-  -moz-animation-delay: 0.5s;
-  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.2s;
+  -webkit-animation-delay: 0.2s;
 }
 
 #layer2 {
+  -moz-animation-delay: 0.4s;
+  -webkit-animation-delay: 0.4s;
+}
+
+#layer3 {
+  -moz-animation-delay: 0.6s;
+  -webkit-animation-delay: 0.6s;
+}
+
+#layer4 {
+  -moz-animation-delay: 0.8s;
+  -webkit-animation-delay: 0.8s;
+}
+
+#layer5 {
   -moz-animation-delay: 1s;
   -webkit-animation-delay: 1s;
 }
 
-#layer3 {
-  -moz-animation-delay: 1.5s;
-  -webkit-animation-delay: 1.5s;
-}
-
-#layer4 {
-  -moz-animation-delay: 2s;
-  -webkit-animation-delay: 2s;
-}
-
-#layer5 {
-  -moz-animation-delay: 2.5s;
-  -webkit-animation-delay: 2.5s;
-}
-
 #layer7 {
-  -moz-animation-delay: 1.5s;
-  -webkit-animation-delay: 1.5s;
+  -moz-animation-delay: 0.4s;
+  -webkit-animation-delay: 0.4s;
 }
 
 #layer8 {
-  -moz-animation-delay: 2s;
-  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 0.8s;
+  -webkit-animation-delay: 0.8s;
 }
 
 #layer9 {
-  -moz-animation-delay: 2.5s;
-  -webkit-animation-delay: 2.5s;
+  -moz-animation-delay: 1s;
+  -webkit-animation-delay: 1s;
 }
 
 #layer10 {
-  -moz-animation-delay: 3s;
-  -webkit-animation-delay: 3s;
+  -moz-animation-delay: 1.2s;
+  -webkit-animation-delay: 1.2s;
 }
 
 #layer11 {
-  -moz-animation-delay: 3.5s;
-  -webkit-animation-delay: 3.5s;
+  -moz-animation-delay: 1.4s;
+  -webkit-animation-delay: 1.4s;
 }
 
 @-moz-keyframes loading {
