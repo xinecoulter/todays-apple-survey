@@ -1,42 +1,50 @@
-<h1><%= @survey.name %></h1>
+<div id="container">
+  <div id="logo">
+    <%= image_tag "Logo-2-.png", alt: "Today's Apple" %>
+  </div>
 
-<ol>
-  <% @survey.questions.each do |question| %>
-    <li class="question">
-      <p>Question: <%= @survey.questions.index(question) + 1 %>/<%= @survey.questions.count %></p>
-      <% question.text.split("<new-paragraph>").each do |paragraph| %>
-        <p><%= paragraph %></p>
+  <div id="survey-content">
+    <h1><%= @survey.name %></h1>
+
+    <ol>
+      <% @survey.questions.each do |question| %>
+        <li class="question">
+          <p>Question: <%= @survey.questions.index(question) + 1 %>/<%= @survey.questions.count %></p>
+          <% question.text.split("<new-paragraph>").each do |paragraph| %>
+            <p><%= paragraph %></p>
+          <% end %>
+          <% question.options.each do |option| %>
+            <%= radio_button_tag(:score, option.weight) %>
+            <%= label_tag(:id, option.text) %> <br />
+          <% end -%>
+        </li>
       <% end %>
-      <% question.options.each do |option| %>
-        <%= radio_button_tag(:score, option.weight) %>
-        <%= label_tag(:id, option.text) %> <br />
-      <% end -%>
-    </li>
-  <% end %>
-</ol>
+    </ol>
 
-<!-- <button id="back-button">Back</button> -->
-<button id="next-button">Next</button>
+    <!-- <button id="back-button">Back</button> -->
+    <button id="next-button">Next</button>
 
-<ul class="hidden-progress" id="progress">
-  <li>
-  <div id="layer1" class="ball"></div> <!-- layer1 control delay animation / ball is effect -->
-  <div id="layer7" class="pulse"></div> <!-- layer7 control delay animation / pulse is effect  -->
-  </li>
-  <li>
-  <div id="layer2" class="ball"></div>
-  <div id="layer8" class="pulse"></div>
-  </li>
-  <li>
-  <div id="layer3" class="ball"></div>
-  <div id="layer9" class="pulse"></div>
-  </li>
-  <li>
-  <div id="layer4" class="ball"></div>
-  <div id="layer10" class="pulse"></div>
-  </li>
-  <li>
-  <div id="layer5" class="ball"></div>
-  <div id="layer11" class="pulse"></div>
-  </li>
-</ul>
+    <ul class="hidden-progress" id="progress">
+      <li>
+      <div id="layer1" class="ball"></div> <!-- layer1 control delay animation / ball is effect -->
+      <div id="layer7" class="pulse"></div> <!-- layer7 control delay animation / pulse is effect  -->
+      </li>
+      <li>
+      <div id="layer2" class="ball"></div>
+      <div id="layer8" class="pulse"></div>
+      </li>
+      <li>
+      <div id="layer3" class="ball"></div>
+      <div id="layer9" class="pulse"></div>
+      </li>
+      <li>
+      <div id="layer4" class="ball"></div>
+      <div id="layer10" class="pulse"></div>
+      </li>
+      <li>
+      <div id="layer5" class="ball"></div>
+      <div id="layer11" class="pulse"></div>
+      </li>
+    </ul>
+  </div>
+</div>
