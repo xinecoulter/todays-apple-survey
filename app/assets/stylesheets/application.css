@@ -12,7 +12,8 @@
  *= require_tree .
  */
 
-.hidden-question {
+.hidden-question,
+.hidden-results {
   display: none;
 }
 

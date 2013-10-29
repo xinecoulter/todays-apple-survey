@@ -3,8 +3,9 @@
 <ol>
   <% @survey.questions.each do |question| %>
     <li class="question">
+      <p>Question: <%= @survey.questions.index(question) + 1 %>/<%= @survey.questions.count %></p>
       <% question.text.split("<new-paragraph>").each do |paragraph| %>
-        <%= paragraph %><br /><br />
+        <p><%= paragraph %></p>
       <% end %>
       <% question.options.each do |option| %>
         <%= radio_button_tag(:score, option.weight) %>
