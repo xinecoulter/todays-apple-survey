@@ -3,11 +3,21 @@
   <div class="jumbotron" id="survey-content">
     <h1>What Is Your Parenting Style?</h1>
     <div class="subheading">
-      <h3 class="col-md-6">Brought to you by</h3>
-      <%= image_tag "Logo-2-.png", alt: "Today's Apple", :id => "logo", :class => "col-md-6" %>
+      Brought to you by
+      <%= image_tag "Logo-2-.png", alt: "Today's Apple", :id => "logo" %>
     </div>
     <br />
-    <button class="btn btn-success btn-lg" id="start-button">Take the Survey!</button>
+    <div class="row" id="survey-description">
+      <div class="col-md-6">
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+      </div>
+      <div class="col-md-6 family-pic-div">
+        <%= image_tag "Family pic.jpg", alt: "Parenting Styles" %>
+      </div>
+    </div>
+    <div class="start-button-div">
+      <button class="btn btn-success btn-lg" id="start-button">Take the Survey!</button>
+    </div>
   </div>
 
   <div class="jumbotron" id="questions-panel">
@@ -31,13 +41,13 @@
         </li>
       <% end %>
     </ol>
-    <!-- <button id="back-button">Back</button> -->
     <div class="button-div">
-      <button class="btn btn-success" id="next-button">Next</button>
+      <button class="btn btn-success btn-lg" id="next-button">Next</button>
     </div>
 
   </div>
 
+  <!-- for the processing circles animation -->
   <ul class="hidden-progress" id="progress">
     <li>
     <div id="layer1" class="ball"></div> <!-- layer1 control delay animation / ball is effect -->

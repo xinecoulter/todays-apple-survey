@@ -65,6 +65,7 @@ $(window).ready(function() {
     //event listener for clicking the start button
     $("#start-button").click(function() {
         $("#start-button").addClass("hidden");
+        $("#survey-description").addClass("hidden");
         $("#questions-panel").slideDown("slow");
     });
 
@@ -86,14 +87,4 @@ $(window).ready(function() {
             }
         }
     });
-
-    //event listener for clicking back
-    //temporarily remove back button; not fully built out with functionality for removing answers
-    // $("#back-button").click(function() {
-    //     if (i > 0) {
-    //         survey.toggleQuestion(i);
-    //         i--;
-    //         survey.toggleQuestion(i);
-    //     }
-    // });
 });
