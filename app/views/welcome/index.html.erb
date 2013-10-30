@@ -11,6 +11,10 @@
   </div>
 
   <div class="jumbotron" id="questions-panel">
+    <div class="barBg">
+      <div class="bar"></div>
+    </div>
+
     <ol>
       <% @survey.questions.each do |question| %>
         <li class="question">
@@ -30,10 +34,6 @@
     <!-- <button id="back-button">Back</button> -->
     <div class="button-div">
       <button class="btn btn-success" id="next-button">Next</button>
-    </div>
-
-    <div class="barBg">
-      <div class="bar"></div>
     </div>
 
   </div>
