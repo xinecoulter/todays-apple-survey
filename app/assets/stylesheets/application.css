@@ -17,6 +17,10 @@
   margin-right: auto;
 }
 
+#questions-panel {
+  display: none;
+}
+
 .hidden-question {
   display: none;
 }

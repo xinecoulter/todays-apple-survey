@@ -3,26 +3,28 @@
     <%= image_tag "Logo-2-.png", alt: "Today's Apple", :class => "img-responsive", :id => "logo" %>
   </div>
 
-  <div id="survey-content">
+  <div class="jumbotron" id="survey-content">
     <h1><%= @survey.name %></h1>
+    <button class="btn btn-success btn-lg" id="start-button">Take the Survey!</button>
 
-    <ol>
-      <% @survey.questions.each do |question| %>
-        <li class="question">
-          <p>Question: <%= @survey.questions.index(question) + 1 %>/<%= @survey.questions.count %></p>
-          <% question.text.split("<new-paragraph>").each do |paragraph| %>
-            <p><%= paragraph %></p>
-          <% end %>
-          <% question.options.each do |option| %>
-            <%= radio_button_tag(:score, option.weight) %>
-            <%= label_tag(:id, option.text) %> <br />
-          <% end -%>
-        </li>
-      <% end %>
-    </ol>
-
-    <!-- <button id="back-button">Back</button> -->
-    <button id="next-button">Next</button>
+    <div id="questions-panel">
+      <ol>
+        <% @survey.questions.each do |question| %>
+          <li class="question">
+            <p>Question: <%= @survey.questions.index(question) + 1 %>/<%= @survey.questions.count %></p>
+            <% question.text.split("<new-paragraph>").each do |paragraph| %>
+              <p><%= paragraph %></p>
+            <% end %>
+            <% question.options.each do |option| %>
+              <%= radio_button_tag(:score, option.weight) %>
+              <%= label_tag(:id, option.text) %><br />
+            <% end -%>
+          </li>
+        <% end %>
+      </ol>
+      <!-- <button id="back-button">Back</button> -->
+      <button class="btn btn-success" id="next-button">Next</button>
+    </div>
 
     <ul class="hidden-progress" id="progress">
       <li>

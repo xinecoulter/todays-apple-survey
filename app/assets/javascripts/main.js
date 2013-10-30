@@ -57,6 +57,11 @@ $(window).ready(function() {
     $(".question").addClass("hidden-question");
     survey.toggleQuestion(i);
 
+    $("#start-button").click(function() {
+        $("#start-button").addClass("hidden");
+        $("#questions-panel").slideDown("slow");
+    });
+
     //event listener for clicking next
     $("#next-button").click(function() {
         if ($("input[type=radio]:checked").size() > 0) {
