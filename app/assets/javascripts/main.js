@@ -50,6 +50,11 @@ var survey = {
     redirectToSubscription: function() {
         //redirects to todaysapple subscription page
         window.location = "http://todaysapple.com/todays-apple-survey/?parentingstyle=" + results[String(score)];
+    },
+    increaseProgressBar: function(index) {
+        var increment = (100 / $(".question").length);
+        // $(".bar").css("width", String(increment * index) + "%");
+        $(".bar").animate({width: String(increment * index) + "%"}, 400, survey.toggleQuestion(i));
     }
 };
 
@@ -57,6 +62,7 @@ $(window).ready(function() {
     $(".question").addClass("hidden-question");
     survey.toggleQuestion(i);
 
+    //event listener for clicking the start button
     $("#start-button").click(function() {
         $("#start-button").addClass("hidden");
         $("#questions-panel").slideDown("slow");
@@ -68,7 +74,8 @@ $(window).ready(function() {
             survey.toggleQuestion(i);
             i++;
             survey.getAnswerValue();
-            survey.toggleQuestion(i);
+            survey.increaseProgressBar(i);
+            // survey.toggleQuestion(i);
             $("input[type=radio]").prop('checked', false);
             if (i === $(".question").length) {
                 $("#next-button").remove();

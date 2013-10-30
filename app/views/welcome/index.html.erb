@@ -8,6 +8,10 @@
     <button class="btn btn-success btn-lg" id="start-button">Take the Survey!</button>
 
     <div id="questions-panel">
+      <div class="barBg">
+        <div class="bar"></div>
+      </div>
+
       <ol>
         <% @survey.questions.each do |question| %>
           <li class="question">
