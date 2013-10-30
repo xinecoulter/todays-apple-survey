@@ -12,6 +12,14 @@
  *= require_tree .
  */
 
+.green {
+  border-width: 5px;
+  border-style: solid;
+  border-left-style: none;
+  border-right-style: none;
+  border-color: rgb(10,119,10);
+}
+
 #logo {
   margin-left: auto;
   margin-right: auto;
