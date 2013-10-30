@@ -1,12 +1,13 @@
 <div class="container">
-
   <div class="jumbotron" id="survey-content">
+
     <h1>What Is Your Parenting Style?</h1>
     <div class="subheading">
       Brought to you by
       <%= image_tag "Logo-2-.png", alt: "Today's Apple", :id => "logo" %>
     </div>
     <br />
+
     <div class="row" id="survey-description">
       <div class="col-md-6">
         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
@@ -15,60 +16,61 @@
         <%= image_tag "Family pic.jpg", alt: "Parenting Styles" %>
       </div>
     </div>
+
     <div class="start-button-div">
       <button class="btn btn-success btn-lg" id="start-button">Take the Survey!</button>
     </div>
-  </div>
 
-  <div class="jumbotron" id="questions-panel">
-    <div class="barBg">
-      <div class="bar"></div>
+    <div id="questions-panel">
+      <div class="barBg">
+        <div class="bar"></div>
+      </div>
+
+      <ol>
+        <% @survey.questions.each do |question| %>
+          <li class="question">
+            <p>Question: <%= @survey.questions.index(question) + 1 %>/<%= @survey.questions.count %></p>
+            <% question.text.split("<new-paragraph>").each do |paragraph| %>
+              <p><%= paragraph %></p>
+            <% end %>
+            <div class="col-md-6 col-md-offset-6">
+              <% question.options.each do |option| %>
+                <%= radio_button_tag(:score, option.weight) %>
+                <%= label_tag(:id, option.text) %><br />
+              <% end -%>
+            </div>
+          </li>
+        <% end %>
+      </ol>
+
+      <div class="button-div">
+        <button class="btn btn-success btn-lg" id="next-button">Next</button>
+      </div>
     </div>
 
-    <ol>
-      <% @survey.questions.each do |question| %>
-        <li class="question">
-          <p>Question: <%= @survey.questions.index(question) + 1 %>/<%= @survey.questions.count %></p>
-          <% question.text.split("<new-paragraph>").each do |paragraph| %>
-            <p><%= paragraph %></p>
-          <% end %>
-          <div class="col-md-6 col-md-offset-6">
-            <% question.options.each do |option| %>
-              <%= radio_button_tag(:score, option.weight) %>
-              <%= label_tag(:id, option.text) %><br />
-            <% end -%>
-          </div>
-        </li>
-      <% end %>
-    </ol>
-    <div class="button-div">
-      <button class="btn btn-success btn-lg" id="next-button">Next</button>
-    </div>
+    <!-- for the processing circles animation -->
+    <ul class="hidden-progress" id="progress">
+      <li>
+      <div id="layer1" class="ball"></div> <!-- layer1 control delay animation / ball is effect -->
+      <div id="layer7" class="pulse"></div> <!-- layer7 control delay animation / pulse is effect  -->
+      </li>
+      <li>
+      <div id="layer2" class="ball"></div>
+      <div id="layer8" class="pulse"></div>
+      </li>
+      <li>
+      <div id="layer3" class="ball"></div>
+      <div id="layer9" class="pulse"></div>
+      </li>
+      <li>
+      <div id="layer4" class="ball"></div>
+      <div id="layer10" class="pulse"></div>
+      </li>
+      <li>
+      <div id="layer5" class="ball"></div>
+      <div id="layer11" class="pulse"></div>
+      </li>
+    </ul>
 
   </div>
-
-  <!-- for the processing circles animation -->
-  <ul class="hidden-progress" id="progress">
-    <li>
-    <div id="layer1" class="ball"></div> <!-- layer1 control delay animation / ball is effect -->
-    <div id="layer7" class="pulse"></div> <!-- layer7 control delay animation / pulse is effect  -->
-    </li>
-    <li>
-    <div id="layer2" class="ball"></div>
-    <div id="layer8" class="pulse"></div>
-    </li>
-    <li>
-    <div id="layer3" class="ball"></div>
-    <div id="layer9" class="pulse"></div>
-    </li>
-    <li>
-    <div id="layer4" class="ball"></div>
-    <div id="layer10" class="pulse"></div>
-    </li>
-    <li>
-    <div id="layer5" class="ball"></div>
-    <div id="layer11" class="pulse"></div>
-    </li>
-  </ul>
-
 </div>
