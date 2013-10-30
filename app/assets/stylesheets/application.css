@@ -15,6 +15,18 @@
 #logo {
   margin-left: auto;
   margin-right: auto;
+  width: 300px;
+  height: auto;
+}
+
+.subheading {
+  text-align: right;
+  width: 100%;
+  height: auto;
+}
+
+.subheading h2 {
+  display: block;
 }
 
 #questions-panel {
@@ -34,6 +46,10 @@ ol,
 ul {
   margin-left:0; /* Remove the default left margin */
   padding-left:0; /* Remove the default left padding */
+}
+
+.button-div {
+  text-align: center;
 }
 
 /*for progress bar to show how many questions are left*/
