@@ -127,7 +127,7 @@ ul#progress li {
 }
 
 ul#progress li:first-child {
-  margin-left: 0;
+  /*margin-left: 0;*/
 } /* Remove the margin first li element */
 
 .ball {
