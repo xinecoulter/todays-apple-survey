@@ -26,6 +26,7 @@ var survey = {
         //shows/hides question by index of questions array
         $("#question-number").text("Question: " + String(i+1) + "/" + String($(".question").length));
         $(".question:eq("+index+")").toggleClass("visible-question");
+        // $(".question:eq("+index+")").delay(1500).fadeToggle();
     },
     getAnswerValue: function() {
         //retrieves value associated with radio button
@@ -62,6 +63,16 @@ var survey = {
         }, 400, "linear", survey.toggleQuestion(index));
     }
 };
+
+// $('html, body').animate({
+//     scrollLeft: $($anchor.attr('href')).offset().left
+//   }, {
+//     queue: false,
+//     duration: 1000,
+//     easing: 'easeInOutCirc',
+//     complete: function () {
+//         alert('test');
+//     }
 
 $(window).ready(function() {
     $(".question").addClass("hidden-question");
