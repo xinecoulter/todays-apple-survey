@@ -25,16 +25,17 @@
 
     <!-- survey questions -->
     <div id="questions-panel">
+      <p id="question-number">Question:</p>
+
+      <!-- progress bar for questions -->
+      <div class="barBg">
+        <div class="bar"></div>
+      </div>
+      <br />
 
       <ol>
         <% @survey.questions.each do |question| %>
           <li class="question">
-            <p>Question: <%= @survey.questions.index(question) + 1 %>/<%= @survey.questions.count %></p>
-            <!-- progress bar for questions -->
-            <div class="barBg">
-              <div class="bar"></div>
-            </div>
-            <br />
             <% question.text.split("<new-paragraph>").each do |paragraph| %>
               <p><%= paragraph %></p>
             <% end %>

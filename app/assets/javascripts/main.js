@@ -23,7 +23,8 @@ results["2222"] = "INFP";
 
 var survey = {
     toggleQuestion: function(index) {
-        //hides question by index of questions array
+        //shows/hides question by index of questions array
+        $("#question-number").text("Question: " + String(i+1) + "/" + String($(".question").length));
         $(".question:eq("+index+")").toggleClass("visible-question");
     },
     getAnswerValue: function() {
@@ -45,7 +46,10 @@ var survey = {
         //determines results based on score and calls redirectToSubscription after 1.5seconds (enough time to finish progress animation)
         console.log("Your parenting style is: " + results[String(score)]);
         $("#progress").removeClass();
-        setTimeout(function() { survey.redirectToSubscription(); }, 1500);
+        setTimeout(function() {
+                survey.redirectToSubscription();
+            }, 1500
+        );
     },
     redirectToSubscription: function() {
         //redirects to todaysapple subscription page
@@ -53,8 +57,13 @@ var survey = {
     },
     increaseProgressBar: function(index) {
         var increment = (100 / $(".question").length);
-        // $(".bar").css("width", String(increment * index) + "%");
-        $(".bar").animate({width: String(increment * index) + "%"}, 400, survey.toggleQuestion(i));
+        $(".bar").animate({
+            width: String(increment * index) + "%"
+        }, 400, "linear", survey.toggleQuestion(index));
+
+        // if ($(".bar")) {
+
+        // }
     }
 };
 
@@ -80,6 +89,7 @@ $(window).ready(function() {
             $("input[type=radio]").prop('checked', false);
             if (i === $(".question").length) {
                 $("#next-button").remove();
+                $("#question-number").addClass("hidden");
                 survey.getScore();
                 console.log(answers);
                 console.log(score);
