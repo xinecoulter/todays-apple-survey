@@ -60,10 +60,6 @@ var survey = {
         $(".bar").animate({
             width: String(increment * index) + "%"
         }, 400, "linear", survey.toggleQuestion(index));
-
-        // if ($(".bar")) {
-
-        // }
     }
 };
 
@@ -85,7 +81,6 @@ $(window).ready(function() {
             i++;
             survey.getAnswerValue();
             survey.increaseProgressBar(i);
-            // survey.toggleQuestion(i);
             $("input[type=radio]").prop('checked', false);
             if (i === $(".question").length) {
                 $("#next-button").remove();
