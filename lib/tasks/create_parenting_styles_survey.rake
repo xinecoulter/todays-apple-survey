@@ -12,10 +12,10 @@ task :create_parenting_styles_survey => :environment do
 
   # add Introverts vs Extroverts question and options
   question_1 = Survey::Question.new do |question|
-    question.text = "Although you probably agree with some of each, which of these two descriptions sounds more like you? (Check Only One)<new-paragraph>Extraverted parents are energized by going, doing, interacting and experiencing. They are typically “in the know” and get children out to experience the world. Too much time isolated at home can make them feel shaky and ungrounded. They are uncomfortable with a child who is more of a loner and needs a lot of solitude.<new-paragraph>Introverted parents are energized by solitude and time alone. They are observant, reflective and prefer one-on-one interactions. They know their children as individuals and provide them with “downtime” to unwind and recharge. Drained by too much interaction, they must guard their energy to make it through the day without exploding.<new-paragraph>If you are still unsure here are more detailed descriptions of Introverts vs Extroverts"
+    question.text = "Although you probably agree with some of each, which of these two descriptions sounds more like you? (Check Only One)<new-paragraph>Extraverted parents are energized by going, doing, interacting and experiencing. They are typically “in the know” and get children out to experience the world. Too much time isolated at home can make them feel shaky and ungrounded. They are uncomfortable with a child who is more of a loner and needs a lot of solitude.<new-paragraph>Introverted parents are energized by solitude and time alone. They are observant, reflective and prefer one-on-one interactions. They know their children as individuals and provide them with “downtime” to unwind and recharge. Drained by too much interaction, they must guard their energy to make it through the day without exploding.<new-paragraph>If you are still unsure here are more detailed descriptions of Extraverts vs Introverts"
     question.options = [
-      Survey::Option.new(:text => "Introverted – Yes, this sound like me",  :weight => 2),
-      Survey::Option.new(:text => "Extroverted – Yes, that's more like me", :weight => 1)
+      Survey::Option.new(:text => "Extraverted – Yes, that's more like me", :weight => 1),
+      Survey::Option.new(:text => "Introverted – Yes, this sound like me",  :weight => 2)
     ]
   end
 
@@ -39,10 +39,10 @@ task :create_parenting_styles_survey => :environment do
 
   # add Perceivers vs Judgers questions and options
   question_4 = Survey::Question.new do |question|
-    question.text = "Which of the following two descriptions sounds more like you? And remember, there is no wrong or right answer.<new-paragraph>Judging parents are intentional parents who like structure, plans, limits, and order. They are adept at organizing day-to-day living so kids feel secure and don’t miss out. They aim to get things done, on time, and in the right way, but struggle to adapt to the unexpected, relax and have fun.<new-paragraph>Perceiving parents take things as they come and keep their options open. They are flexible and spontaneous, and generally tolerant and accepting of children. They enjoy hanging out and can be relaxed about clutter, but struggle to do chores regularly and keep the house in order.<new-paragraph>If you are still unsure here are more detailed descriptions of Perceivers vs Judgers"
+    question.text = "Which of the following two descriptions sounds more like you? And remember, there is no wrong or right answer.<new-paragraph>Judging parents are intentional parents who like structure, plans, limits, and order. They are adept at organizing day-to-day living so kids feel secure and don’t miss out. They aim to get things done, on time, and in the right way, but struggle to adapt to the unexpected, relax and have fun.<new-paragraph>Perceiving parents take things as they come and keep their options open. They are flexible and spontaneous, and generally tolerant and accepting of children. They enjoy hanging out and can be relaxed about clutter, but struggle to do chores regularly and keep the house in order.<new-paragraph>If you are still unsure here are more detailed descriptions of Judgers vs Perceivers"
     question.options = [
-      Survey::Option.new(:text => "Perceiving – Yes, this seems like me", :weight => 2000),
       Survey::Option.new(:text => "Judging – Yes, this sound like me", :weight => 1000),
+      Survey::Option.new(:text => "Perceiving – Yes, this seems like me", :weight => 2000)
     ]
   end
 

@@ -63,7 +63,12 @@ ul {
 }
 
 .button-div {
-  text-align: center;
+  text-align: right;
+  vertical-align: top;
+}
+
+#next-button {
+  top: 0;
 }
 
 /*for progress bar to show how many questions are left*/
