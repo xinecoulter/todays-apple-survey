@@ -56,6 +56,11 @@
   list-style-type: none;
 }
 
+span {
+  color: rgb(53,148,53);
+  font-weight: bold;
+}
+
 ol,
 ul {
   margin-left:0; /* Remove the default left margin */

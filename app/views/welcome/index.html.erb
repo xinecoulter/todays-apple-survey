@@ -37,7 +37,12 @@
         <% @survey.questions.each do |question| %>
           <li class="question">
             <% question.text.split("<new-paragraph>").each do |paragraph| %>
-              <p><%= paragraph %></p>
+              <% if paragraph.include? "<span>" %>
+                <% new_paragraph = paragraph.split("<span>") %>
+                <p><span><%= new_paragraph[0] %></span><%= new_paragraph[1] %></p>
+              <% else %>
+                <p><%= paragraph %></p>
+              <% end %>
             <% end %>
             <div class="col-md-6 col-md-offset-6">
               <% question.options.each do |option| %>
