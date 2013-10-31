@@ -53,7 +53,7 @@ var survey = {
     },
     redirectToSubscription: function() {
         //redirects to todaysapple subscription page
-        window.location = "http://todaysapple.com/todays-apple-survey/?parentingstyle=" + results[String(score)];
+        window.location = "http://todaysapple.com/parenting-style/?parentingstyle=" + results[String(score)];
     },
     increaseProgressBar: function(index) {
         var increment = (100 / $(".question").length);
