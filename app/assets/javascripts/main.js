@@ -24,9 +24,12 @@ results["2222"] = "INFP";
 var survey = {
     toggleQuestion: function(index) {
         //shows/hides question by index of questions array
-        $("#question-number").text("Question: " + String(i+1) + "/" + String($(".question").length));
-        $(".question:eq("+index+")").toggleClass("visible-question");
+        // $(".question:eq("+index+")").toggleClass("visible-question");
         // $(".question:eq("+index+")").delay(1500).fadeToggle();
+        setTimeout(function () {
+            $("#question-number").text("Question: " + String(i+1) + "/" + String($(".question").length));
+            $(".question:eq("+index+")").toggleClass("visible-question");
+        }, 1000);
     },
     getAnswerValue: function() {
         //retrieves value associated with radio button
@@ -48,9 +51,8 @@ var survey = {
         console.log("Your parenting style is: " + results[String(score)]);
         $("#progress").removeClass();
         setTimeout(function() {
-                survey.redirectToSubscription();
-            }, 1500
-        );
+            survey.redirectToSubscription();
+        }, 1500);
     },
     redirectToSubscription: function() {
         //redirects to todaysapple subscription page
@@ -61,6 +63,18 @@ var survey = {
         $(".bar").animate({
             width: String(increment * index) + "%"
         }, 400, "linear", survey.toggleQuestion(index));
+
+        // $(".bar").animate({
+        //     width: String(increment * index) + "%"
+        // }, {
+        //     queue: false,
+        //     duration: 1000,
+        //     easing: "linear",
+        //     complete: function() {
+        //         $("#question-number").text("Question: " + String(i+1) + "/" + String($(".question").length));
+        //         $(".question:eq("+index+")").fadeToggle();
+        //     }
+        // });
     }
 };
 
@@ -96,6 +110,7 @@ $(window).ready(function() {
             if (i === $(".question").length) {
                 $("#next-button").remove();
                 $("#question-number").addClass("hidden");
+                $(".question").remove(); //new
                 survey.getScore();
                 console.log(answers);
                 console.log(score);
