@@ -15,6 +15,8 @@ class CreateSurvey < ActiveRecord::Migration
     create_table :survey_questions do |t|
       t.integer :survey_id
       t.text  :text
+      t.text :first_detailed_description
+      t.text :second_detailed_description
 
       t.timestamps
     end

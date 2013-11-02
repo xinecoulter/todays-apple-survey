@@ -12,8 +12,11 @@
     <!-- survey description -->
     <div class="row" id="survey-description">
       <div class="col-md-6">
-        <p>Did you know there are 16 parenting style possibilities? Find out where your blind spots are, what your strengths really are, and how you can begin to better communicate with your children and spouse.</p>
-        <p>This Parenting Style survey is based on Myer-Briggs personality types. Take the survey by answering only 4 questions. Be as accurate as possible. Be as honest to yourself as possible. Click the big green button below to begin:</p>
+        <%= @survey.description.html_safe %>
+<!--         <a id="floatbar" href="#">
+          <div class="popup">Hi there</div>
+          click here
+        </a> -->
       </div>
       <div class="col-md-6 family-pic-div">
         <%= image_tag "Family pic.jpg", alt: "Parenting Styles", :class => "img-responsive" %>
@@ -37,14 +40,11 @@
       <ol>
         <% @survey.questions.each do |question| %>
           <li class="question">
-            <% question.text.split("<new-paragraph>").each do |paragraph| %>
-              <% if paragraph.include? "<span>" %>
-                <% new_paragraph = paragraph.split("<span>") %>
-                <p><span><%= new_paragraph[0] %></span><%= new_paragraph[1] %></p>
-              <% else %>
-                <p><%= paragraph %></p>
-              <% end %>
+            <% if question.text.include? "<button>" %>
+              <% new_paragraph = question.text.split("<button>") %>
+              <%= new_paragraph[0].html_safe %><button id="floatbar" href="#"><div class="popup row"><div class="col-md-6"><%= question.first_detailed_description.html_safe %></div><div class="col-md-6"><%= question.second_detailed_description.html_safe %></div></div><%= new_paragraph[1].html_safe %></button></p>
             <% end %>
+
             <div class="col-md-6 col-md-offset-6">
               <% question.options.each do |option| %>
                 <%= radio_button_tag(:score, option.weight) %>

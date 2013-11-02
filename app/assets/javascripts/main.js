@@ -92,6 +92,11 @@ $(window).ready(function() {
     $(".question").addClass("hidden-question");
     survey.toggleQuestion(i);
 
+    $("#floatbar").click(function(e){
+        e.preventDefault();
+        $(this).find(".popup").fadeIn("slow");
+    });
+
     //event listener for clicking the start button
     $("#start-button").click(function() {
         $("#start-button").addClass("hidden");

@@ -41,9 +41,11 @@ ActiveRecord::Schema.define(:version => 20131028162739) do
 
   create_table "survey_questions", :force => true do |t|
     t.integer  "survey_id"
-    t.string   "text"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.text     "text"
+    t.text     "first_detailed_description"
+    t.text     "second_detailed_description"
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
   end
 
   create_table "survey_surveys", :force => true do |t|

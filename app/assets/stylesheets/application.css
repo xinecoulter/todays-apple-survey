@@ -12,6 +12,19 @@
  *= require_tree .
  */
 
+#floatbar {
+    position:relative;
+}
+
+.popup {
+    position:absolute;
+    top:10px;
+    left:0px;
+    height:30px;
+    background:#ccc;
+    display:none;
+}
+
 body {
   border-width: 5px;
   border-style: solid;
@@ -74,7 +87,8 @@ ul {
 }
 
 #next-button {
-  top: 0;
+  position: relative;
+  top: -80px;
 }
 
 footer {
