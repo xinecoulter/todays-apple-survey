@@ -38,7 +38,7 @@
           <li class="question">
             <p><%= question.text %></p>
 
-            <div class="row col-md-12">
+            <div class="row container radiowrapper-container">
               <% question.options.each do |option| %>
                 <div class="col-md-6 radiowrapper">
                   <input type="radio" name="answer" value="<%= option.weight %>" id="answer<%= option.id %>">

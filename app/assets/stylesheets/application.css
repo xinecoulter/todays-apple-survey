@@ -86,8 +86,25 @@ ul {
   vertical-align: top;
 }
 
+/*radio button text options*/
+
+.radiowrapper input {
+  visibility: hidden;
+  width: 0;
+}
+
+.radiowrapper label:hover {
+  background-color: rgb(182,238,182);
+}
+
+.radiowrapper input:checked + label {
+  background-color: rgb(255,228,232);
+}
+
 .radiowrapper label {
   background-color: rgb(231,255,231);
+  padding: 15px;
+  border-radius: 5px;
 }
 
 footer {
