@@ -97,6 +97,7 @@ $(window).ready(function() {
         $("#start-button").addClass("hidden");
         $("#survey-description").addClass("hidden");
         $("#questions-panel").slideDown("slow");
+        $(".barBg").css("visibility", "visible");
     });
 
     //event listener for clicking to learn more detailed description popup windows. semi-functioning

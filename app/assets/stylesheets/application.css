@@ -88,20 +88,33 @@ ul {
 
 /*radio button text options*/
 
+.radiowrapper:first-child {
+  right: 5px;
+}
+
+.radiowrapper:last-child {
+  left: 5px;
+}
+
 .radiowrapper input {
   visibility: hidden;
   width: 0;
 }
 
-.radiowrapper label:hover {
+.radiowrapper:hover {
   background-color: rgb(182,238,182);
 }
 
-.radiowrapper input:checked + label {
+/*.radiowrapper input:checked + label {
   background-color: rgb(255,228,232);
-}
+}*/
 
 .radiowrapper label {
+  font-weight: normal;
+  line-height: normal;
+}
+
+.radiowrapper {
   background-color: rgb(231,255,231);
   padding: 15px;
   border-radius: 5px;
@@ -124,6 +137,9 @@ footer {
   border:10px solid #282828;
   border-radius: 20px;
   box-shadow: 0px 5px 17px rgba(40, 40, 40, 0.5);
+
+  margin-top: 30px;
+  visibility: hidden;
 }
 
 .bar {

@@ -3,9 +3,16 @@
 
     <!-- headline and subheadline -->
     <h1>What Is Your Parenting Style?</h1>
-    <div class="subheading">
-      Brought to you by
-      <%= image_tag "Logo-2-.png", alt: "Today's Apple", :id => "logo" %>
+
+    <div class="container row">
+      <!-- progress bar for questions -->
+      <div class="barBg col-md-6">
+        <div class="bar"></div>
+      </div>
+      <div class="subheading col-md-6">
+        Brought to you by
+        <%= image_tag "Logo-2-.png", alt: "Today's Apple", :id => "logo" %>
+      </div>
     </div>
     <br />
 
@@ -26,12 +33,6 @@
     <!-- survey questions -->
     <div id="questions-panel">
       <span><p id="question-number">Question:</p></span>
-
-      <!-- progress bar for questions -->
-      <div class="barBg">
-        <div class="bar"></div>
-      </div>
-      <br />
 
       <ol>
         <% @survey.questions.each do |question| %>
