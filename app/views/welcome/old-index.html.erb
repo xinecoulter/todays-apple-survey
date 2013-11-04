@@ -1,3 +1,5 @@
+<!-- old structure -->
+
 <div class="container">
   <div class="jumbotron" id="survey-content">
 
@@ -36,20 +38,20 @@
       <ol>
         <% @survey.questions.each do |question| %>
           <li class="question">
-            <p><%= question.text %></p>
+            <% if question.text.include? "<button>" %>
+              <% new_paragraph = question.text.split("<button>") %>
+              <%= new_paragraph[0].html_safe %><button id="floatbar" href="#"><div class="popup row"><div class="col-md-6"><%= question.first_detailed_description.html_safe %></div><div class="col-md-6"><%= question.second_detailed_description.html_safe %></div></div><%= new_paragraph[1].html_safe %></button></p>
+            <% end %>
 
-            <div class="row col-md-12">
+            <div class="col-md-6 col-md-offset-6">
               <% question.options.each do |option| %>
-                <div class="col-md-6 radiowrapper">
-                  <input type="radio" name="answer" value="<%= option.weight %>" id="answer<%= option.id %>">
-                  <label for="answer<%= option.id %>"><%= option.text.html_safe %></label>
-                </div>
+                <%= radio_button_tag(:score, option.weight) %>
+                <%= label_tag(:id, option.text) %><br />
               <% end -%>
             </div>
           </li>
         <% end %>
       </ol>
-
       <div class="button-div">
         <button class="btn btn-success btn-lg" id="next-button">Next</button>
       </div>

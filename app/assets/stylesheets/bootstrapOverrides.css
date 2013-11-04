@@ -1,3 +1,24 @@
+body {
+  background-color: rgb(231,255,231);
+}
+
 .jumbotron {
   background-color: #ffffff;
+}
+
+.radiowrapper {
+  /*position: absolute;*/
+}
+
+.radiowrapper input {
+  visibility: hidden;
+  width: 0;
+}
+
+.radiowrapper label:hover {
+  color: red;
+}
+
+.radiowrapper input:checked + label {
+  background-color: pink;
 }

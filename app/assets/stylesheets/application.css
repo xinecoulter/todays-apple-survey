@@ -82,13 +82,12 @@ ul {
 }
 
 .button-div {
-  text-align: right;
+  text-align: center;
   vertical-align: top;
 }
 
-#next-button {
-  position: relative;
-  top: -80px;
+.radiowrapper label {
+  background-color: rgb(231,255,231);
 }
 
 footer {

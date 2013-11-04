@@ -42,6 +42,8 @@ ActiveRecord::Schema.define(:version => 20131028162739) do
   create_table "survey_questions", :force => true do |t|
     t.integer  "survey_id"
     t.text     "text"
+    t.text     "first_category"
+    t.text     "second_category"
     t.text     "first_detailed_description"
     t.text     "second_detailed_description"
     t.datetime "created_at",                  :null => false
