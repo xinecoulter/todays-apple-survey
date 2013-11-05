@@ -49,7 +49,7 @@
                     <input type="radio" name="answer" value="<%= option.weight %>" id="answer<%= option.id %>">
                     <label for="answer<%= option.id %>"><%= text_array[1].html_safe %></label>
                     <button class="description-button">Learn more about <%= text_array[0] %></button>
-                    <div class="col-md-12"><%= text_array[2].html_safe %></div>
+                    <div class="col-md-12 description-div hidden"><%= text_array[2].html_safe %></div>
                   <% end %>
                 </div>
               <% end -%>

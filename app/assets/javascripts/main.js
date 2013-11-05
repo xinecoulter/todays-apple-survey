@@ -128,9 +128,18 @@ $(window).ready(function() {
         });
     });
 
+    //event listener for clicking on description buttons
+    $(".description-button").click(function() {
+        $(".description-button").toggleClass("hidden");
+        $(".description-div").toggleClass("hidden");
+    });
+
     //event listener for clicking next
     $("#next-button").click(function() {
         if ($("input[type=radio]:checked").size() > 0) {
+            $(".description-button").toggleClass("hidden");
+            $(".description-div").toggleClass("hidden");
+
             survey.toggleQuestion(i);
             i++;
             survey.getAnswerValue();
