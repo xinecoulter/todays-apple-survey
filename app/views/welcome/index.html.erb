@@ -41,8 +41,6 @@
             <div class="row container radiowrapper-container">
               <% question.options.each do |option| %>
                 <div class="col-md-6 radiowrapper">
-<!--                   <input type="radio" name="answer" value="<%= option.weight %>" id="answer<%= option.id %>">
-                  <label for="answer<%= option.id %>"><%= option.text.html_safe %></label> -->
                   <% if option.text.include? "<split>" %>
                     <% text_array = option.text.split("<split>") %>
                     <input type="radio" name="answer" value="<%= option.weight %>" id="answer<%= option.id %>">
@@ -57,9 +55,9 @@
         <% end %>
       </ol>
 
-      <div class="button-div">
-        <button class="btn btn-success btn-lg" id="next-button">Next Question</button>
-        <p class="warning">You must select an answer to continue.</p>
+      <div class="button-div row">
+        <div class="col-md-4 col-md-offset-4"><button class="btn btn-success btn-lg" id="next-button">Next Question</button></div>
+        <div class="col-md-4"><p class="warning">You must select an answer to continue.</p></div>
       </div>
     </div>
 

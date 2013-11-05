@@ -68,7 +68,7 @@ span {
 }
 
 ol,
-ul {
+#progress {
   margin-left:0; /* Remove the default left margin */
   padding-left:0; /* Remove the default left padding */
 }
