@@ -17,3 +17,7 @@ body {
 ul {
   line-height: normal;
 }
+
+.description-div h3 {
+  font-size: 21px;
+}

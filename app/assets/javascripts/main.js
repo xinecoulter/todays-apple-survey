@@ -109,10 +109,13 @@ $(window).ready(function () {
 
   //event listener for selecting radio button text
   //sets all radiowrapper divs to light gray and makes radiowrapper of selected input mint green
-  $("input[type=radio]").click(function (e) {
-    $("input[type=radio]").parent().css("background-color", "rgb(245, 245, 245)");
-    $("input[type=radio]:checked").parent().css("background-color", "rgb(182, 238, 182)");
-
+  // $("input[type=radio]").click(function (e) {
+  //   $("input[type=radio]").parent().css("background-color", "rgb(245, 245, 245)");
+  //   $("input[type=radio]:checked").parent().css("background-color", "rgb(182, 238, 182)");
+  $(".radiowrapper").click(function (e) {
+    $("input[type=radio]").parent().css("background-color", "rgb(245, 245, 245");
+    $(this).css("background-color", "rgb(182, 238, 182)");
+    $(this).find("input[type=radio]").prop("checked", true);
 
     //event listeners for hovering over radio button text
     //sets radiowrapper to light green when the mouse enters, if it is not the parradiowrapper div of the checked input
@@ -130,7 +133,8 @@ $(window).ready(function () {
   });
 
   //event listener for clicking on description buttons
-  $(".description-button").click(function () {
+  $(".description-button").click(function (event) {
+    event.stopPropagation(); //stops parent radiowrapper's radiobutton from being selected when clicking on the description button
     $(".description-button").addClass("hidden");
     $(".description-div").removeClass("hidden");
   });
