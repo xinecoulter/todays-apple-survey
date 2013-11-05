@@ -42,8 +42,13 @@
             <div class="row container radiowrapper-container">
               <% question.options.each do |option| %>
                 <div class="col-md-6 radiowrapper">
-                  <input type="radio" name="answer" value="<%= option.weight %>" id="answer<%= option.id %>">
-                  <label for="answer<%= option.id %>"><%= option.text.html_safe %></label>
+<!--                   <input type="radio" name="answer" value="<%= option.weight %>" id="answer<%= option.id %>">
+                  <label for="answer<%= option.id %>"><%= option.text.html_safe %></label> -->
+                  <% if option.text.include? "<split>" %>
+                    <% text_array = option.text.split("<split>") %>
+                    <input type="radio" name="answer" value="<%= option.weight %>" id="answer<%= option.id %>">
+                    <label for="answer<%= option.id %>"><%= text_array[1].html_safe %></label>
+                  <% end %>
                 </div>
               <% end -%>
             </div>

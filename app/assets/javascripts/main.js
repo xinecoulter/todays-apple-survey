@@ -107,23 +107,23 @@ $(window).ready(function() {
     });
 
     //event listener for selecting radio button text
-    //sets all radiowrapper divs to light green and makes radiowrapper of selected input pink
+    //sets all radiowrapper divs to light gray and makes radiowrapper of selected input mint green
     $("input[type=radio]").click(function(e) {
-        $("input[type=radio]").parent().css("background-color", "rgb(231,255,231)");
-        $("input[type=radio]:checked").parent().css("background-color", "rgb(255, 192, 203)");
+        $("input[type=radio]").parent().css("background-color", "rgb(245, 245, 245)");
+        $("input[type=radio]:checked").parent().css("background-color", "rgb(182, 238, 182)");
 
 
         //event listeners for hovering over radio button text
-        //sets radiowrapper to darker green when the mouse enters, if it is not the parent radiowrapper div of the checked input
+        //sets radiowrapper to light green when the mouse enters, if it is not the parent radiowrapper div of the checked input
         $(".radiowrapper").mouseenter(function() {
-            if ($(this).css("background-color") !== "rgb(255, 192, 203)") {
-                $(this).css("background-color", "rgb(182,238,182)");
+            if ($(this).css("background-color") !== "rgb(182, 238, 182)") {
+                $(this).css("background-color", "rgb(231, 255, 231)");
             }
         });
-        //sets radiowrapper to light green when the mouse leaves, if it is not the parent radiowrapper div of the checked input
+        //sets radiowrapper to light gray when the mouse leaves, if it is not the parent radiowrapper div of the checked input
         $(".radiowrapper").mouseleave(function() {
-            if ($(this).css("background-color") !== "rgb(255, 192, 203)") {
-                $(this).css("background-color", "rgb(231,255,231)");
+            if ($(this).css("background-color") !== "rgb(182, 238, 182)") {
+                $(this).css("background-color", "rgb(245, 245, 245)");
             }
         });
     });

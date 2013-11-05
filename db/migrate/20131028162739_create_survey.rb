@@ -15,10 +15,6 @@ class CreateSurvey < ActiveRecord::Migration
     create_table :survey_questions do |t|
       t.integer :survey_id
       t.text  :text
-      t.text :first_category
-      t.text :second_category
-      t.text :first_detailed_description
-      t.text :second_detailed_description
 
       t.timestamps
     end
@@ -26,7 +22,7 @@ class CreateSurvey < ActiveRecord::Migration
     create_table :survey_options do |t|
       t.integer :question_id
       t.integer :weight, :default => 0
-      t.string :text
+      t.text :text
       t.boolean :correct
 
       t.timestamps
