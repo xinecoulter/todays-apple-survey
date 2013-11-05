@@ -93,16 +93,16 @@ ul {
   padding: 15px;
   border-radius: 5px;
   border-style: solid;
-  border-width: 1px;
+  border-width: 3px;
   border-color: #ffffff;
 }
 
 .radiowrapper:first-child {
-  right: 5px;
+  right: 15px;
 }
 
 .radiowrapper:last-child {
-  left: 5px;
+  left: 15px;
 }
 
 .radiowrapper input {
@@ -138,7 +138,7 @@ footer {
   width:50%;
   margin-left: auto;
   margin-right: auto;
-  border:10px solid #282828;
+  border:5px solid #282828;
   border-radius: 20px;
   box-shadow: 0px 5px 17px rgba(40, 40, 40, 0.5);
 
