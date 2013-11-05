@@ -24,8 +24,6 @@ results["2222"] = "INFP";
 var survey = {
   toggleQuestion: function (index) {
     //shows/hides question by index of questions array
-    // $(".question:eq("+index+")").toggleClass("visible-question");
-    // $(".question:eq("+index+")").delay(1500).fadeToggle();
     setTimeout(function () {
       $("#question-number").text("Question: " + String(i + 1) + "/" + String($(".question").length));
       $(".question:eq(" + index + ")").toggleClass("visible-question");
@@ -63,34 +61,13 @@ var survey = {
     $(".bar").animate({
       width: String(increment * index) + "%"
     }, 400, "linear", survey.toggleQuestion(index));
-
-        // $(".bar").animate({
-        //     width: String(increment * index) + "%"
-        // }, {
-        //     queue: false,
-        //     duration: 1000,
-        //     easing: "linear",
-        //     complete: function() {
-        //         $("#question-number").text("Question: " + String(i+1) + "/" + String($(".question").length));
-        //         $(".question:eq("+index+")").fadeToggle();
-        //     }
-        // });
   }
 };
-
-// $('html, body').animate({
-//     scrollLeft: $($anchor.attr('href')).offset().left
-//   }, {
-//     queue: false,
-//     duration: 1000,
-//     easing: 'easeInOutCirc',
-//     complete: function () {
-//         alert('test');
-//     }
 
 $(window).ready(function () {
   $(".question").addClass("hidden-question");
   $(".description-div").addClass("hidden");
+  $(".warning").addClass("hidden");
   survey.toggleQuestion(i);
 
   //event listener for clicking the start button
@@ -109,10 +86,9 @@ $(window).ready(function () {
 
   //event listener for selecting radio button text
   //sets all radiowrapper divs to light gray and makes radiowrapper of selected input mint green
-  // $("input[type=radio]").click(function (e) {
-  //   $("input[type=radio]").parent().css("background-color", "rgb(245, 245, 245)");
-  //   $("input[type=radio]:checked").parent().css("background-color", "rgb(182, 238, 182)");
   $(".radiowrapper").click(function (e) {
+    $(".warning").addClass("hidden"); //hides warning if user selects answer
+
     $("input[type=radio]").parent().css("background-color", "rgb(245, 245, 245");
     $(this).css("background-color", "rgb(182, 238, 182)");
     $(this).find("input[type=radio]").prop("checked", true);
@@ -142,6 +118,7 @@ $(window).ready(function () {
   //event listener for clicking next
   $("#next-button").click(function () {
     if ($("input[type=radio]:checked").size() > 0) {
+
       $(".description-button").removeClass("hidden");
       $(".description-div").addClass("hidden");
 
@@ -153,12 +130,14 @@ $(window).ready(function () {
       if (i === $(".question").length) {
         $("#next-button").remove();
         $("#question-number").addClass("hidden");
-        $(".question").remove(); //new
+        $(".question").remove();
         survey.getScore();
         console.log(answers);
         console.log(score);
         survey.getResults(score);
       }
+    } else {
+      $(".warning").removeClass("hidden"); //displays warning to select an answer
     }
   });
 });

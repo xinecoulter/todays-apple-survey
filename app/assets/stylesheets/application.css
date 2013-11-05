@@ -107,13 +107,14 @@ ul {
   border-color: rgb(63,143,63);
 }
 
-/*.radiowrapper input:checked + label {
-  background-color: rgb(255,228,232);
-}*/
-
 .radiowrapper label {
   font-weight: normal;
   line-height: normal;
+}
+
+.warning {
+  color: red;
+  font-size: 18px;
 }
 
 footer {
