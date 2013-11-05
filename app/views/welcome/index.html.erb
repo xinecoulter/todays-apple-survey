@@ -48,18 +48,18 @@
                     <% text_array = option.text.split("<split>") %>
                     <input type="radio" name="answer" value="<%= option.weight %>" id="answer<%= option.id %>">
                     <label for="answer<%= option.id %>"><%= text_array[1].html_safe %></label>
-                    <button class="description-button">Learn more about <%= text_array[0] %></button>
-                    <div class="col-md-12 description-div hidden"><%= text_array[2].html_safe %></div>
+                    <button class="btn btn-default btn-sm description-button">Learn More About <%= text_array[0] %></button>
+                    <div class="col-md-12 description-div"><%= text_array[2].html_safe %></div>
                   <% end %>
                 </div>
-              <% end -%>
+              <% end %>
             </div>
           </li>
         <% end %>
       </ol>
 
       <div class="button-div">
-        <button class="btn btn-success btn-lg" id="next-button">Next</button>
+        <button class="btn btn-success btn-lg" id="next-button">Next Question</button>
       </div>
     </div>
 

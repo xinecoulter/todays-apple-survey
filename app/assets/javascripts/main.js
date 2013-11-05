@@ -90,6 +90,7 @@ var survey = {
 
 $(window).ready(function () {
   $(".question").addClass("hidden-question");
+  $(".description-div").addClass("hidden");
   survey.toggleQuestion(i);
 
   //event listener for clicking the start button
@@ -130,15 +131,15 @@ $(window).ready(function () {
 
   //event listener for clicking on description buttons
   $(".description-button").click(function () {
-    $(".description-button").toggleClass("hidden");
-    $(".description-div").toggleClass("hidden");
+    $(".description-button").addClass("hidden");
+    $(".description-div").removeClass("hidden");
   });
 
   //event listener for clicking next
   $("#next-button").click(function () {
     if ($("input[type=radio]:checked").size() > 0) {
-      $(".description-button").toggleClass("hidden");
-      $(".description-div").toggleClass("hidden");
+      $(".description-button").removeClass("hidden");
+      $(".description-div").addClass("hidden");
 
       survey.toggleQuestion(i);
       i++;

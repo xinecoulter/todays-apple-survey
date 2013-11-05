@@ -12,3 +12,7 @@ body {
   display: table-cell;
   float: none;
 }
+
+ul {
+  line-height: normal;
+}
