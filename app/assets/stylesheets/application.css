@@ -88,6 +88,15 @@ ul {
 
 /*radio button text options*/
 
+.radiowrapper {
+  background-color: rgb(231,255,231);
+  padding: 15px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ffffff;
+}
+
 .radiowrapper:first-child {
   right: 5px;
 }
@@ -103,6 +112,7 @@ ul {
 
 .radiowrapper:hover {
   background-color: rgb(182,238,182);
+  border-color: rgb(63,143,63);
 }
 
 /*.radiowrapper input:checked + label {
@@ -112,12 +122,6 @@ ul {
 .radiowrapper label {
   font-weight: normal;
   line-height: normal;
-}
-
-.radiowrapper {
-  background-color: rgb(231,255,231);
-  padding: 15px;
-  border-radius: 5px;
 }
 
 footer {

@@ -101,10 +101,31 @@ $(window).ready(function() {
     });
 
     //event listener for clicking to learn more detailed description popup windows. semi-functioning
-
-    $("#floatbar").click(function(e){
+    $("#floatbar").click(function(e) {
         e.preventDefault();
         $(this).find(".popup").fadeIn("slow");
+    });
+
+    //event listener for selecting radio button text
+    //sets all radiowrapper divs to light green and makes radiowrapper of selected input pink
+    $("input[type=radio]").click(function(e) {
+        $("input[type=radio]").parent().css("background-color", "rgb(231,255,231)");
+        $("input[type=radio]:checked").parent().css("background-color", "rgb(255, 192, 203)");
+
+
+        //event listeners for hovering over radio button text
+        //sets radiowrapper to darker green when the mouse enters, if it is not the parent radiowrapper div of the checked input
+        $(".radiowrapper").mouseenter(function() {
+            if ($(this).css("background-color") !== "rgb(255, 192, 203)") {
+                $(this).css("background-color", "rgb(182,238,182)");
+            }
+        });
+        //sets radiowrapper to light green when the mouse leaves, if it is not the parent radiowrapper div of the checked input
+        $(".radiowrapper").mouseleave(function() {
+            if ($(this).css("background-color") !== "rgb(255, 192, 203)") {
+                $(this).css("background-color", "rgb(231,255,231)");
+            }
+        });
     });
 
     //event listener for clicking next
