@@ -24,7 +24,7 @@ ul {
   font-size: 21px;
 }
 
-/*media query*/
+/*media query to have radiowrappers stack for window sizes less than 991px*/
 
 @media screen and (max-width: 991px) {
 
