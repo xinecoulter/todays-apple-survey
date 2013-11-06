@@ -354,7 +354,7 @@ ul#progress li:first-child {
 @media screen and (max-width: 321px) {
 
   #logo {
-    width: 100%;
+    width: 200px;
   }
 
 }
