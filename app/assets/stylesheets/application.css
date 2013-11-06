@@ -349,3 +349,12 @@ ul#progress li:first-child {
   }
 
 }
+
+/*media query for changing size of logo image when the window size is less than 320px (iphone screen size)*/
+@media screen and (max-width: 320px) {
+
+  #logo {
+    width: 100%;
+  }
+
+}
