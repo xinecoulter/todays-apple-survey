@@ -76,16 +76,12 @@ $(window).ready(function () {
     $("#survey-description").addClass("hidden");
     $("#questions-panel").slideDown("slow");
     $(".barBg").css("visibility", "visible");
-
-    return false;
   });
 
   //event listener for clicking to learn more detailed description popup windows. semi-functioning
   $("#floatbar").click(function (e) {
     e.preventDefault();
     $(this).find(".popup").fadeIn("slow");
-
-    return false;
   });
 
   //event listener for selecting radio button text
@@ -103,19 +99,13 @@ $(window).ready(function () {
       if ($(this).css("background-color") !== "rgb(182, 238, 182)") {
         $(this).css("background-color", "rgb(231, 255, 231)");
       }
-
-      return false;
     });
     //sets radiowrapper to light gray when the mouse leaves, if it is not the parent radiowrapper div of the checked input
     $(".radiowrapper").mouseleave(function () {
       if ($(this).css("background-color") !== "rgb(182, 238, 182)") {
         $(this).css("background-color", "rgb(245, 245, 245)");
       }
-
-      return false;
     });
-
-    return false;
   });
 
   //event listener for clicking on description buttons
@@ -149,7 +139,5 @@ $(window).ready(function () {
     } else {
       $(".warning").removeClass("hidden"); //displays warning to select an answer
     }
-
-    return false;
   });
 });
