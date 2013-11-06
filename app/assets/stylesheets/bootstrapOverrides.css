@@ -1,3 +1,5 @@
+/*override bootstrap css rules*/
+
 body {
   background-color: rgb(231,255,231);
 }
@@ -20,4 +22,24 @@ ul {
 
 .description-div h3 {
   font-size: 21px;
+}
+
+/*media query*/
+
+@media screen and (max-width: 991px) {
+
+  .radiowrapper {
+    display: block;
+    width: 100%;
+  }
+
+  .radiowrapper:first-child {
+    right: 0;
+    margin-bottom: 15px;
+  }
+
+  .radiowrapper:last-child {
+    left: 0;
+  }
+
 }

@@ -330,3 +330,13 @@ ul#progress li:first-child {
 .hidden-progress {
   display: none;
 }
+
+/*media screen stuff for responsive design*/
+
+@media screen and (max-width: 768px) {
+
+  #title {
+    font-size: 48px;
+  }
+
+}

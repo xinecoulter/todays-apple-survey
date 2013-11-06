@@ -94,13 +94,13 @@ $(window).ready(function () {
     $(this).find("input[type=radio]").prop("checked", true);
 
     //event listeners for hovering over radio button text
-    //sets radiowrapper to light green when the mouse enters, if it is not the parradiowrapper div of the checked input
+    //sets radiowrapper to light green when the mouse enters, if it is not the parent radiowrapper div of the checked input
     $(".radiowrapper").mouseenter(function () {
       if ($(this).css("background-color") !== "rgb(182, 238, 182)") {
         $(this).css("background-color", "rgb(231, 255, 231)");
       }
     });
-    //sets radiowrapper to light gray when the mouse leaves, if it is not the parradiowrapper div of the checked input
+    //sets radiowrapper to light gray when the mouse leaves, if it is not the parent radiowrapper div of the checked input
     $(".radiowrapper").mouseleave(function () {
       if ($(this).css("background-color") !== "rgb(182, 238, 182)") {
         $(this).css("background-color", "rgb(245, 245, 245)");
