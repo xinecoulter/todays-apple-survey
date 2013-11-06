@@ -1,7 +1,7 @@
 class WelcomeController < ApplicationController
 
   def index
-    @survey = Survey::Survey.where(name: "Parenting Styles Survey").first
+    @survey = Survey::Survey.where(name: "Mommy Styles Survey").first
   end
 
 end
