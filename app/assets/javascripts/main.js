@@ -89,7 +89,8 @@ $(window).ready(function () {
   $(".radiowrapper").click(function (e) {
     $(".warning").addClass("hidden"); //hides warning if user selects answer
 
-    $("input[type=radio]").parent().css("background-color", "rgb(245, 245, 245");
+    // $("input[type=radio]").parent().css("background-color", "rgb(245, 245, 245");
+    $(".radiowrapper").css("background-color", "rgb(245, 245, 245)");
     $(this).css("background-color", "rgb(182, 238, 182)");
     $(this).find("input[type=radio]").prop("checked", true);
 
@@ -106,6 +107,7 @@ $(window).ready(function () {
         $(this).css("background-color", "rgb(245, 245, 245)");
       }
     });
+
   });
 
   //event listener for clicking on description buttons
