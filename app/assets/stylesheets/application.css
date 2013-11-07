@@ -367,3 +367,12 @@ ul#progress li:first-child {
   }
 
 }
+
+@media screen and (max-height: 800px) {
+
+  .radiowrapper:hover {
+    background-color: rgb(245, 245, 245);
+    /*border-color: rgb(63,143,63);*/
+  }
+
+}
