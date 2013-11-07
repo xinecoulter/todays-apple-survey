@@ -78,12 +78,6 @@ $(window).ready(function () {
     $(".barBg").css("visibility", "visible");
   });
 
-  //event listener for clicking to learn more detailed description popup windows. semi-functioning
-  // $("#floatbar").click(function (e) {
-  //   e.preventDefault();
-  //   $(this).find(".popup").fadeIn("slow");
-  // });
-
   //event listener for selecting radio button text
   //sets all radiowrapper divs to light gray and makes radiowrapper of selected input mint green
   $(".radiowrapper").click(function (e) {
@@ -93,25 +87,15 @@ $(window).ready(function () {
     $(this).css("background-color", "rgb(182, 238, 182)");
     $(this).find("input[type=radio]").prop("checked", true);
 
-
-
-    // if ( $(window).width() > 739) {
-    //   //Add your javascript for large screens here
+    // if ( $(window).width() < 800) {
+    //   $(this).css("b")
     // }
-    // else {
-    //   //Add your javascript for small screens here
-    // }
-
   });
 
   //event listeners for hovering over radio button text
   //sets radiowrapper to light green when the mouse enters, if it is not the parent radiowrapper div of the checked input
   $(".radiowrapper").mouseenter(function () {
-    // if ($(this).css("background-color") !== "rgb(182, 238, 182)") {
-    //   $(this).css("background-color", "rgb(231, 255, 231)");
-    // }
-
-    if ( $(window).width() > 800) {
+    if ( $(window).width() >= 800) {
       if ($(this).css("background-color") !== "rgb(182, 238, 182)") {
         $(this).css("background-color", "rgb(231, 255, 231)");
       }
@@ -119,10 +103,6 @@ $(window).ready(function () {
   });
   //sets radiowrapper to light gray when the mouse leaves, if it is not the parent radiowrapper div of the checked input
   $(".radiowrapper").mouseleave(function () {
-    // if ($(this).css("background-color") !== "rgb(182, 238, 182)") {
-    //   $(this).css("background-color", "rgb(245, 245, 245)");
-    // }
-
     if ( $(window).width() >= 800) {
       if ($(this).css("background-color") !== "rgb(182, 238, 182)") {
         $(this).css("background-color", "rgb(245, 245, 245)");
