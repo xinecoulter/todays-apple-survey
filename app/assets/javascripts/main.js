@@ -111,6 +111,7 @@ $(window).ready(function () {
 
   //event listener for clicking on description buttons
   $(".description-button").click(function (event) {
+    event.preventDefault();
     event.stopPropagation(); //stops parent radiowrapper's radiobutton from being selected when clicking on the description button
     $(".description-button").addClass("hidden");
     $(".description-div").removeClass("hidden");
