@@ -359,7 +359,7 @@ ul#progress li:first-child {
 
 }
 
-@media screen {
+@media screen and (min-width: 800px) {
 
   .radiowrapper:hover {
     background-color: rgb(231, 255, 231);
