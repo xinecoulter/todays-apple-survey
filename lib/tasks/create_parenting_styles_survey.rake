@@ -5,7 +5,7 @@ task :create_parenting_styles_survey => :environment do
   # build parenting styles survey
   parenting_styles_survey = Survey::Survey.new do |survey|
     survey.name = "Mommy Styles Survey"
-    survey.description = "<p>Did you know there are 16 mommy style possibilities? Find out where your blind spots are, what your strengths really are, and how you can begin to better communicate with your children and spouse.</p><p>This Mommy Style survey is based on Myer-Briggs personality types. Take the survey by answering only 4 questions. Be as accurate as possible. Be as honest to yourself as possible. Click the big green button below to begin:</p>"
+    survey.description = "<p>Being a mommy is a full time job. Often we're worried we're not doing it the best we can and we fear we may be affecting our children's long-term growth.</p><p>There are 16 different Mommy Styles that have been identified, and being aware of your strengths and blind spots will help you be a more effective parent. Answer 4 Questions and discover what kind of mommy you are.</p>"
     # survey.attempts_number = 3
     survey.active = true
   end
