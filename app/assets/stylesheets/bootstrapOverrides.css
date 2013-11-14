@@ -22,8 +22,12 @@ ul {
   line-height: normal;
 }
 
-.description-div h3 {
-  font-size: 21px;
+.description-div {
+  padding-left: 6px;
+  padding-right: 6px;
+  font-weight: normal;
+  line-height: normal;
+  top: -10px;
 }
 
 /*media query to have radiowrappers stack for window sizes less than 991px*/
