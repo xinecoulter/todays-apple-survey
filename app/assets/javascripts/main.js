@@ -78,21 +78,25 @@ $(window).ready(function () {
     $(".barBg").css("visibility", "visible");
   });
 
-  //event listener for selecting radio button text
+  //event listener for selecting radiowrapper div
   //sets all radiowrapper divs to light gray and makes radiowrapper of selected input mint green
   $(".radiowrapper").click(function (e) {
     $(".warning").addClass("hidden"); //hides warning if user selects answer
 
+    //resets all radiowrappers to have a light gray background color and a white border
     $(".radiowrapper").css("background-color", "rgb(245, 245, 245)");
+    $(".radiowrapper").css("border-color", "#ffffff");
+
+    //changes background color or selected radiowrapper to mint green and changes border to dark green
     $(this).css("background-color", "rgb(182, 238, 182)");
+    $(this).css("border-color", "rgb(63, 143, 63)");
+
+    //makes sure invisible radio button inside selected div is actually checked
     $(this).find("input[type=radio]").prop("checked", true);
 
-    // if ( $(window).width() < 800) {
-    //   $(this).css("b")
-    // }
   });
 
-  //event listeners for hovering over radio button text
+  //event listeners for hovering over radiowrapper div
   //sets radiowrapper to light green when the mouse enters, if it is not the parent radiowrapper div of the checked input
   $(".radiowrapper").mouseenter(function () {
     if ( $(window).width() >= 800) {
