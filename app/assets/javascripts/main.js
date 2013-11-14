@@ -78,7 +78,7 @@ $(window).ready(function () {
     $(".barBg").css("visibility", "visible");
   });
 
-  //event listener for selecting radio button text
+  //event listener for selecting radiowrapper div
   //sets all radiowrapper divs to light gray and makes radiowrapper of selected input mint green
   $(".radiowrapper").click(function (e) {
     $(".warning").addClass("hidden"); //hides warning if user selects answer
@@ -92,7 +92,7 @@ $(window).ready(function () {
     // }
   });
 
-  //event listeners for hovering over radio button text
+  //event listeners for hovering over radiowrapper div
   //sets radiowrapper to light green when the mouse enters, if it is not the parent radiowrapper div of the checked input
   $(".radiowrapper").mouseenter(function () {
     if ( $(window).width() >= 800) {
