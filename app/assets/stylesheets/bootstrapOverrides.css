@@ -9,6 +9,10 @@ body {
   margin-bottom: 0;
 }
 
+#start-button {
+  font-size: 40px;
+}
+
 .radiowrapper {
   width: 510px;
 
