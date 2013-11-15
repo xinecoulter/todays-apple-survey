@@ -27,11 +27,11 @@ ul {
 }
 
 .description-div {
-  padding-left: 6px;
-  padding-right: 6px;
+/*  padding-left: 6px;
+  padding-right: 6px;*/
   font-weight: normal;
   line-height: normal;
-  top: -10px;
+  /*top: -10px;*/
 }
 
 /*media query to have radiowrappers stack for window sizes less than 991px*/
