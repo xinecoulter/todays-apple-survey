@@ -53,3 +53,11 @@ ul {
   }
 
 }
+
+@media screen and (max-width: 466px) {
+
+  #start-button {
+    font-size: 36px;
+  }
+
+}
