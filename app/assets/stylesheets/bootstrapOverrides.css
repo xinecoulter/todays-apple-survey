@@ -9,6 +9,10 @@ body {
   margin-bottom: 0;
 }
 
+#start-button {
+  font-size: 40px;
+}
+
 .radiowrapper {
   width: 510px;
 
@@ -23,11 +27,11 @@ ul {
 }
 
 .description-div {
-  padding-left: 6px;
-  padding-right: 6px;
+/*  padding-left: 6px;
+  padding-right: 6px;*/
   font-weight: normal;
   line-height: normal;
-  top: -10px;
+  /*top: -10px;*/
 }
 
 /*media query to have radiowrappers stack for window sizes less than 991px*/
@@ -46,6 +50,14 @@ ul {
 
   .radiowrapper:last-child {
     left: 0;
+  }
+
+}
+
+@media screen and (max-width: 466px) {
+
+  #start-button {
+    font-size: 36px;
   }
 
 }
