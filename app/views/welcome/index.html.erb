@@ -4,6 +4,7 @@
     <!-- headline and subheadline -->
     <h1 id="title">What Kind of Mommy Are You?</h1>
 
+    <br/>
     <div class="container row">
       <!-- progress bar for questions -->
       <div class="barBg col-md-6 hidden">
@@ -21,16 +22,13 @@
     <!-- survey description -->
     <div class="row" id="survey-description">
       <div class="col-md-6">
+        <br/>
         <%= @survey.description.html_safe %>
       </div>
       <div class="col-md-6 family-pic-div">
         <%= image_tag "Family pic.jpg", alt: "Parenting Styles", :class => "img-responsive" %>
       </div>
     </div>
-
-<!--     <div class="start-button-div">
-      <button class="btn btn-success btn-lg" id="start-button">Take the Survey!</button>
-    </div> -->
 
     <!-- survey questions -->
     <div id="questions-panel">

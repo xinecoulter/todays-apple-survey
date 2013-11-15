@@ -28,7 +28,6 @@ var survey = {
     $("#start-button").addClass("hidden");
     $("#survey-description").addClass("hidden");
     $("#questions-panel").slideDown("slow");
-    // $(".barBg").css("visibility", "visible");
     $(".barBg").removeClass("hidden");
   },
   toggleQuestion: function (index) {
