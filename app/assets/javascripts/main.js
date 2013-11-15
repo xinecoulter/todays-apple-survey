@@ -1,8 +1,10 @@
+//variables to keep track of which number question the user is on, their answers, and the total score (sum of weight of answers)
 var i = 0,
   answers = [],
   score = 0;
 
 //16 different parenting style outcomes based on score
+//1 of the values will be sent as a parameter in the redirect to the registration page
 var results = {};
 results["1111"] = "ESTJ";
 results["2111"] = "ESTP";
@@ -22,6 +24,12 @@ results["1222"] = "INFJ";
 results["2222"] = "INFP";
 
 var survey = {
+  beginSurvey: function () {
+    $("#start-button").addClass("hidden");
+    $("#survey-description").addClass("hidden");
+    $("#questions-panel").slideDown("slow");
+    $(".barBg").css("visibility", "visible");
+  },
   toggleQuestion: function (index) {
     //shows/hides question by index of questions array
     setTimeout(function () {
@@ -70,12 +78,22 @@ $(window).ready(function () {
   $(".warning").addClass("hidden");
   survey.toggleQuestion(i);
 
+  //event listeners for beginning the survey
   //event listener for clicking the start button
   $("#start-button").click(function () {
-    $("#start-button").addClass("hidden");
-    $("#survey-description").addClass("hidden");
-    $("#questions-panel").slideDown("slow");
-    $(".barBg").css("visibility", "visible");
+    survey.beginSurvey();
+  });
+  //event listener for clicking on the family image for people who don't know how to click on the start button
+  $(".family-pic-div img").click(function () {
+    survey.beginSurvey();
+  });
+  //event listener for clicking on the headline for people who don't know how to click on the start button
+  $("#title").click(function () {
+    survey.beginSurvey();
+  });
+  //event listener for clicking on the logo for people who don't know how to click on the start button
+  $(".subheading").click(function () {
+    survey.beginSurvey();
   });
 
   //event listener for selecting radiowrapper div
