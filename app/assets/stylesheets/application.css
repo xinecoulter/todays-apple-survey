@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  border-width: 5px;
+  border-width: 20px;
   border-style: solid;
   border-left-style: none;
   border-right-style: none;
@@ -141,7 +141,7 @@ ol,
 
 footer {
   width: 100%;
-  height: 5px;
+  height: 20px;
   background-color: rgb(10,119,10);
   position: fixed;
   bottom: 0;
