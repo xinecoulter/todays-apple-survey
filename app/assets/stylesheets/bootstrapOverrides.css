@@ -34,6 +34,11 @@ ul {
   /*top: -10px;*/
 }
 
+.bar-logo-row {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 /*media query to have radiowrappers stack for window sizes less than 991px*/
 
 @media screen and (max-width: 991px) {

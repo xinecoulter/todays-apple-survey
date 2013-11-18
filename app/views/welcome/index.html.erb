@@ -4,8 +4,7 @@
     <!-- headline and subheadline -->
     <h1 id="title">What Kind of Mommy Are You?</h1>
 
-    <br/>
-    <div class="container row">
+    <div class="container row bar-logo-row">
       <!-- progress bar for questions -->
       <div class="barBg col-md-6 hidden">
         <div class="bar"></div>
@@ -21,8 +20,7 @@
 
     <!-- survey description -->
     <div class="row" id="survey-description">
-      <div class="col-md-6">
-        <br/>
+      <div class="col-md-6 survey-description-text">
         <%= @survey.description.html_safe %>
       </div>
       <div class="col-md-6 family-pic-div">

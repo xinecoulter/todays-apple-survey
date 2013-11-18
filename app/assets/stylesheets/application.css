@@ -76,6 +76,10 @@ body {
   text-align: center;
 }
 
+.survey-description-text {
+  padding-top: 20px;
+}
+
 #questions-panel {
   display: none;
 }
