@@ -62,7 +62,7 @@ ul {
 
 }
 
-@media screen and (max-width: 330px) {
+@media screen and (max-width: 335px) {
   #start-button {
     font-size: 28px;
   }
