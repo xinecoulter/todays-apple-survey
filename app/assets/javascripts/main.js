@@ -156,6 +156,7 @@ $(window).ready(function () {
         $("#next-button").remove();
         $("#question-number").addClass("hidden");
         $(".question").remove();
+        $("#survey-content").css("height", "100%");
         survey.getScore();
         console.log(answers);
         console.log(score);
