@@ -6,7 +6,6 @@ body {
 
 .jumbotron {
   background-color: #ffffff;
-  margin-bottom: 0;
 }
 
 #start-button {
@@ -32,6 +31,11 @@ ul {
   font-weight: normal;
   line-height: normal;
   /*top: -10px;*/
+}
+
+.bar-logo-row {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 /*media query to have radiowrappers stack for window sizes less than 991px*/
@@ -60,4 +64,16 @@ ul {
     font-size: 36px;
   }
 
+}
+
+@media screen and (max-width: 335px) {
+  #start-button {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 255px) {
+  #start-button {
+    font-size: 16px;
+  }
 }
