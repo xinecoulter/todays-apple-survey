@@ -6,7 +6,7 @@
 
     <div class="container row bar-logo-row">
       <!-- progress bar for questions -->
-      <div class="barBg col-md-6 hidden">
+<!--       <div class="barBg col-md-6 hidden">
         <div class="bar"></div>
       </div>
       <div class="start-button-div col-md-6">
@@ -15,6 +15,16 @@
       <div class="subheading col-md-6">
         Brought to you by
         <%= image_tag "Logo-2-.png", alt: "Today's Apple", :id => "logo" %>
+      </div> -->
+      <div class="subheading col-md-6 col-md-push-6">
+        Brought to you by
+        <%= image_tag "Logo-2-.png", alt: "Today's Apple", :id => "logo" %>
+      </div>
+      <div class="barBg col-md-6 col-md-pull-6 hidden">
+        <div class="bar"></div>
+      </div>
+      <div class="start-button-div col-md-6 col-md-pull-6">
+        <button class="btn btn-success btn-lg" id="start-button">Take the Survey!</button>
       </div>
     </div>
 
